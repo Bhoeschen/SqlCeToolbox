@@ -1659,7 +1659,17 @@ namespace ErikEJ.SqlCeScripting
             {
                 case "nvarchar":
                 case "nchar":
-                case "binary":
+					line = string.Format(CultureInfo.InvariantCulture,
+						"[{0}] {1}({2}) {3} {4}{5}"
+						, col.ColumnName
+						, col.DataType
+						, col.CharacterMaxLength == -1 ? 4000 : col.CharacterMaxLength
+						, colDefault
+						, colNull
+						, _sqlite ? "COLLATE NOCASE" : null
+						);
+					break;
+				case "binary":
                 case "varbinary":
                     line = string.Format(CultureInfo.InvariantCulture,
                         "[{0}] {1}({2}) {3} {4}"

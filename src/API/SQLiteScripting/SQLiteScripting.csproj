@@ -97,13 +97,13 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ISqlCeScripting.csproj">
-      <Project>{B690CB18-0DC5-4C20-AEB3-F9F4B55B4601}</Project>
-      <Name>ISqlCeScripting</Name>
-    </ProjectReference>
+    <None Include="Key.snk" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Key.snk" />
+    <ProjectReference Include="..\ISqlCeScripting.csproj">
+      <Project>{b690cb18-0dc5-4c20-aeb3-f9f4b55b4601}</Project>
+      <Name>ISqlCeScripting</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
