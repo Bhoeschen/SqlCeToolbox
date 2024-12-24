@@ -1813,7 +1813,7 @@ namespace ErikEJ.SqlCeScripting
 						, col.CharacterMaxLength == -1 ? 4000 : col.CharacterMaxLength
 						, colDefault
 						, colNull
-						, _sqlite ? "COLLATE NOCASE" : null
+						, _sqlite ? " COLLATE NOCASE" : null
 						);
 					break;
 				case "binary":
